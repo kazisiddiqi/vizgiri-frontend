@@ -15,7 +15,7 @@ function App(){
     try {
       const form = new FormData();
       form.append("file", file);
-      const res = await axios.post("http://localhost:8000/upload", form, {
+      const res = await axios.post("https://vizgiri-backend.onrender.com/upload", form, {
         headers: {"Content-Type": "multipart/form-data"}
       });
       setSummary(res.data);
